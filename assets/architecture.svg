@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title description">
+  <title id="title">AWS Cloud Foundations Explorer deployment architecture</title>
+  <description id="description">A developer pushes source code to GitHub. AWS Amplify Hosting deploys the connected branch. A visitor opens the public HTTPS site.</description>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17243f"/>
+      <stop offset="1" stop-color="#243859"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff9900"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="420" rx="28" fill="url(#background)"/>
+  <text x="600" y="62" fill="#ffffff" font-family="system-ui, sans-serif" font-size="30" font-weight="700" text-anchor="middle">Continuous deployment flow</text>
+
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <rect x="60" y="135" width="250" height="150" rx="20" fill="#ffffff"/>
+    <text x="185" y="195" fill="#17243f" font-size="25" font-weight="700">Developer</text>
+    <text x="185" y="232" fill="#596579" font-size="18">Visual Studio Code and Git</text>
+
+    <rect x="475" y="135" width="250" height="150" rx="20" fill="#ffffff"/>
+    <text x="600" y="195" fill="#17243f" font-size="25" font-weight="700">GitHub</text>
+    <text x="600" y="232" fill="#596579" font-size="18">Public source repository</text>
+
+    <rect x="890" y="135" width="250" height="150" rx="20" fill="#ffffff"/>
+    <text x="1015" y="185" fill="#17243f" font-size="25" font-weight="700">AWS Amplify Hosting</text>
+    <text x="1015" y="224" fill="#596579" font-size="18">Build, deploy, and HTTPS site</text>
+  </g>
+
+  <line x1="315" y1="210" x2="460" y2="210" stroke="#ff9900" stroke-width="8" marker-end="url(#arrow)"/>
+  <line x1="730" y1="210" x2="875" y2="210" stroke="#ff9900" stroke-width="8" marker-end="url(#arrow)"/>
+
+  <text x="387" y="185" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" text-anchor="middle">git push</text>
+  <text x="802" y="185" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" text-anchor="middle">connected branch</text>
+  <text x="600" y="355" fill="#dfe8f5" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle">Visitors open the AWS-provided public HTTPS URL</text>
+</svg>

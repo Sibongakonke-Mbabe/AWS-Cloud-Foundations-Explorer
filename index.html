@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="An interactive beginner guide to AWS cloud foundations and service selection."
+    >
+    <title>AWS Cloud Foundations Explorer</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <header class="site-header">
+      <nav class="nav-container" aria-label="Primary navigation">
+        <a class="brand" href="#top">Cloud Foundations</a>
+        <div class="nav-links">
+          <a href="#concepts">Concepts</a>
+          <a href="#services">Services</a>
+          <a href="#quiz">Quiz</a>
+        </div>
+      </nav>
+
+      <div class="hero" id="top">
+        <h1>AWS Cloud Foundations Explorer</h1>
+        <p class="hero-copy">
+          Explore cloud concepts, compare foundational AWS services, and test
+          which service fits a practical scenario.
+        </p>
+      </div>
+    </header>
+
+
+    <main id="main-content">
+
+      <section class="section" id="concepts">
+        <div class="section-heading">
+          <p class="eyebrow">Cloud basics</p>
+          <h2>Four ideas behind cloud computing</h2>
+        </div>
+
+        <div class="card-grid concept-grid">
+          <article class="card">
+            <h3>On-demand resources</h3>
+            <p>Provision compute, storage, databases, and other resources when they are needed.</p>
+          </article>
+          <article class="card">
+            <h3>Pay as you go</h3>
+            <p>Use individual services for as long as they are needed and pay for the resources consumed.</p>
+          </article>
+          <article class="card">
+            <h3>Regions and Availability Zones</h3>
+            <p>A Region is a separate geographic area. Availability Zones are isolated locations inside a Region.</p>
+          </article>
+          <article class="card">
+            <h3>Shared responsibility</h3>
+            <p>AWS secures the cloud infrastructure. Customers secure their data, access, and service configuration.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">Service selection</p>
+          <h2>Six foundational AWS services</h2>
+          <p>Start with the problem, then choose the service category that solves it.</p>
+        </div>
+
+        <div class="card-grid service-grid">
+          <article class="card service-card">
+            <span class="service-category">Compute</span>
+            <h3>Amazon EC2</h3>
+            <p>Provides on-demand, scalable computing capacity as virtual servers.</p>
+            <p class="use-case">Use it when you need control over a virtual server.</p>
+          </article>
+          <article class="card service-card">
+            <span class="service-category">Storage</span>
+            <h3>Amazon S3</h3>
+            <p>Stores data as objects inside buckets with scalable storage and access controls.</p>
+            <p class="use-case">Use it for files, backups, static assets, and data storage.</p>
+          </article>
+          <article class="card service-card">
+            <span class="service-category">Networking</span>
+            <h3>Amazon VPC</h3>
+            <p>Provides a logically isolated virtual network for AWS resources.</p>
+            <p class="use-case">Use it to define network boundaries, subnets, routes, and connectivity.</p>
+          </article>
+          <article class="card service-card">
+            <span class="service-category">Relational database</span>
+            <h3>Amazon RDS</h3>
+            <p>Makes it easier to set up, operate, and scale a relational database.</p>
+            <p class="use-case">Use it when an application needs tables, relationships, and SQL.</p>
+          </article>
+          <article class="card service-card">
+            <span class="service-category">NoSQL database</span>
+            <h3>Amazon DynamoDB</h3>
+            <p>Provides a serverless, fully managed, distributed NoSQL database.</p>
+            <p class="use-case">Use it for key-value or document workloads that need consistent scaling.</p>
+          </article>
+          <article class="card service-card">
+            <span class="service-category">Identity and access</span>
+            <h3>AWS Identity and Access Management</h3>
+            <p>Controls who is authenticated and authorized to access AWS resources.</p>
+            <p class="use-case">Use it to manage identities, roles, and permissions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section architecture-section" id="architecture">
+        <div class="section-heading">
+          <p class="eyebrow">Project architecture</p>
+          <h2>From a Git push to a public site</h2>
+        </div>
+        <img
+          class="architecture-image"
+          src="assets/architecture.svg"
+          alt="Developer pushes to GitHub, AWS Amplify Hosting deploys the site, and visitors open the HTTPS URL."
+        >
+        <p class="architecture-copy">
+          GitHub stores the source and change history. AWS Amplify Hosting reads
+          the connected branch, deploys the static files, and publishes an HTTPS URL.
+        </p>
+      </section>
+
+      <section class="section section-alt" id="quiz">
+        <div class="quiz-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Knowledge check</p>
+            <h2>Choose the right AWS service</h2>
+          </div>
+
+          <p class="scenario" id="scenario-text"></p>
+          <div class="answer-grid" id="answer-grid" role="group" aria-label="AWS service choices">
+            <button class="answer-button" type="button" data-service="ec2">Amazon EC2</button>
+            <button class="answer-button" type="button" data-service="s3">Amazon S3</button>
+            <button class="answer-button" type="button" data-service="vpc">Amazon VPC</button>
+            <button class="answer-button" type="button" data-service="rds">Amazon RDS</button>
+            <button class="answer-button" type="button" data-service="dynamodb">Amazon DynamoDB</button>
+            <button class="answer-button" type="button" data-service="iam">AWS IAM</button>
+          </div>
+          <p class="quiz-result" id="quiz-result" aria-live="polite">Choose one service.</p>
+          <button class="secondary-button" id="next-scenario" type="button" hidden>
+            Next scenario
+          </button>
+        </div>
+      </section>
+
+    </main>
+    
+    <footer class="site-footer">
+      <p>Built to demonstrate AWS cloud foundations and continuous deployment.</p>
+      <p>Portfolio project <span id="current-year"></span></p>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+  </body>
+</html>
